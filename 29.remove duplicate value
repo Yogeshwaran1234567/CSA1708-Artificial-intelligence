@@ -1,0 +1,15 @@
+PROGRAM;
+
+list_unique(List, Unique) :-
+    list_unique_1(List, [], Us).
+
+list_unique_1([], _, []).
+list_unique_1([X|Xs], So_far, Us) :-
+    list_unique_2(X, Xs, So_far, Us).
+
+
+OUTPUT;
+
+remove_duplicates([a,a,b,c],L).
+L = [a, b, c] ;
+false.
