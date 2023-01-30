@@ -1,0 +1,12 @@
+PROGRAM;
+
+length([], 0).
+length([H|T], N) :- length(T, N1), N is N1+1.
+
+
+
+OUTPUT;
+
+?- length_1(X, [1,2,3]), L is X.
+X = 0+1+1+1,
+L = 3.
